@@ -43,8 +43,51 @@
 
 #----------Number divisible by another-------
 
-print("The number divisible by 13 are: ")
+# print("The number divisible by 13 are: ")
 
-for i in range(1, 100):
-    if i%13==0:
-        print(i)
+# for i in range(1, 100):
+#     if i%13==0:
+#         print(i)
+
+#----------using lambda and filter function---------
+
+# l=[39,48,26,98,33,67,87]
+
+# result=list(filter(lambda x:x%13==0,l))
+# print(result)
+
+
+#---------find HCF--------
+
+# def findHCF(x,y):
+#     hcf=1
+#     for i in range(1, min(x,y)+1):
+#         if x%i==0 and y%i==0:
+#             hcf=i
+#     return hcf
+
+# print("The hcf of the given two number is", findHCF(12,30))
+
+
+# import calendar
+# year=int(input("Enter the year: "))
+# month=int(input("Enter the month: "))
+
+# calendar=calendar.month(year, month)
+# print(calendar)
+
+
+#---------Fibonacci using Recursion---------
+def fibonacci(n):
+    if n<0:
+        return "Invalid input"
+    elif n==0:
+        return 0
+    elif n==1:
+        return 1
+    else:
+        return fibonacci(n-1)+fibonacci(n-2)
+num=int(input("Enter the number of terms: "))
+print("Fibonacci sequence:")
+for i in range(num):
+    print(fibonacci(i))
